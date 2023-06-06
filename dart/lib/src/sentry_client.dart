@@ -74,7 +74,8 @@ class SentryClient {
     }
 
     event =
-        await _processEvent(event, eventProcessors: _options.eventProcessors);
+        await _processEvent(event, eventProcessors: _options.eventProcessors,
+        hint: hint);
 
     // dropped by event processors
     if (event == null) {
